@@ -1,0 +1,71 @@
+package databaseproject1;
+
+import java.util.Scanner;
+import java.sql.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+public class DatabaseProject1 
+{
+
+    public static void main(String[] args) 
+    {
+
+        String sName, sSurname, sDob, sGender, sGrade, pName, pSurname, pNumber;
+        Integer children;
+
+        Scanner in = new Scanner(System.in);
+
+        System.out.println( "Please input your first name(s) : ");
+        sName = in.nextLine();
+
+        System.out.println( "Please input your Surname : ");
+        sSurname = in.nextLine();
+
+        System.out.println( "Please input your Date of Birth (YYYY-MM-DD) : ");
+        sDob = in.nextLine();
+
+        System.out.println( "Please input your Gender (Male/Female) : ");
+        sGender = in.nextLine();
+
+        System.out.println( "Please input your Grade : ");
+        sGrade = in.nextLine();
+
+        System.out.println( "Please input your Parent's Name : ");
+        pName = in.nextLine();
+
+        System.out.println( "Please input your Parent's Surname : ");
+        pSurname = in.nextLine();
+
+        System.out.println( "Please input your Contact Number : ");
+        pNumber = in.nextLine();
+
+        System.out.println( "Please input the amount of children your parent's have enrolled to the school : ");
+        children = in.nextInt();
+
+        try
+        {
+             Class.forName("com.mysql.jdbc.Driver");
+             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/student_db", "zaynab", "09031992");
+             System.out.println("Database Connection Success");
+             
+             String query = "INSERT INTO students VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+             PreparedStatement preparedStmt = con.prepareStatement(query);
+             preparedStmt.setString(1, sName);
+             preparedStmt.setString(2, sSurname);
+             preparedStmt.setString(3, sDob);
+             preparedStmt.setString(4, sGender);
+             preparedStmt.setString(5, sGrade);
+             preparedStmt.setString(6, pName);
+             preparedStmt.setString(7, pSurname);
+             preparedStmt.setString(8, pNumber);
+             preparedStmt.setInt(9, children);
+             preparedStmt.executeUpdate();
+             System.out.println("Record inserted successfully.");
+        } 
+        catch (ClassNotFoundException ex) {Logger.getLogger(DatabaseProject1.class.getName()).log(Level.SEVERE, null, ex);} 
+        catch (SQLException ex) {Logger.getLogger(DatabaseProject1.class.getName()).log(Level.SEVERE, null, ex);}
+    }
+
+
+}
