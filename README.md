@@ -9,25 +9,25 @@ GitHub Desktop and run it on Visual Studio but you can download a zip file and r
 
 
 - Prerequisites
-- GitHub
-- NetBeans IDE
-- MySQL Workbench
+GitHub
+NetBeans IDE
+MySQL Workbench
 
 - Installing
-- On GitHub: Once you have installed it, open it and sign-in or sign-up. Then start the tutorial desktop to see how to use GitHub.
-- On Netbeans: Open it and start a new project. If you are able to do that then Netbeans is installed correctly.
-- MySQL Workbench: Open and create a new database
+On GitHub: Once you have installed it, open it and sign-in or sign-up. Then start the tutorial desktop to see how to use GitHub.
+On Netbeans: Open it and start a new project. If you are able to do that then Netbeans is installed correctly.
+MySQL Workbench: Open and create a new database
 
 - Running the tests
-- Once the file is cloned open it in GitHub. GitHub will allow you to open it in Netbeans or run it. Run it to test the code,
-- fix any errors and run it again. Repeat this until there are no errors.
+Once the file is cloned open it in GitHub. GitHub will allow you to open it in Netbeans or run it. Run it to test the code,
+fix any errors and run it again. Repeat this until there are no errors.
 
 - Built With
-- GitHub - Software used for software development version control using Git
-- Word - For the documentation
-- Eclipse - Used to write the inital code.
-- Netbeans - Used to run and edit the code.
-- MySQL - used to create database
+GitHub - Software used for software development version control using Git
+Word - For the documentation
+Eclipse - Used to write the inital code.
+Netbeans - Used to run and edit the code.
+MySQL - used to create database
 
 - Authors
-- Zaynab Hartley
+Zaynab Hartley
